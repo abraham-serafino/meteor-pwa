@@ -28,6 +28,7 @@ on desktops or  mobile devices. Take a look at the following files and folders f
 * `public/`
 * `client/main.html`
 * `imports/client.js`
+* `.meteor/packages` (notice the addition of the force-ssl Meteor package)
 
 
 ## Author
