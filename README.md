@@ -1,4 +1,4 @@
-# Meteor Booklist
+# Meteor Booklist as a Progressive Web App
 
 ## Getting started
 
@@ -12,7 +12,7 @@ npm run dev
 
 Then visit http://localhost:3000
 
-To build and launch a production-ready docker container with bundled MongoDB and sqlite instance (requires Docker):
+To build and launch a production-ready docker container with bundled MongoDB instance (requires Docker):
 
 ```bash
 npm start
@@ -22,27 +22,13 @@ Then visit http://localhost:80
 
 ## Highlights
 
-This project shows how MeteorJS can be used with data sources other than MongoDB. See:
-* `imports/Books/Books.api.js`
+This project shows how MeteorJS can be used to create Progressive Web Apps, which can be installed for offline use
+on desktops or  mobile devices. Take a look at the following files and folders for example code:
 
-It also demonstrates a simple way to do isomorphic routing with React Router and hand-rolled,
-server-side data loaders. See:
-* the exported `{...}Routes` objects in `imports/App/App.jsx` and `imports/App/Home.page.jsx`; and,
-* the bookLoader in `Books/Books.page.jsx`
-
-Then you can see how those route/loaders are used in:
-* `imports/server.js`; and,
+* `public/`
+* `client/main.html`
 * `imports/client.js`
 
-Finally, it provides validation methods that can be used with Joi (or other) schemas and plugged
-into Meteor methods, REST endpoints, database methods, or form libraries such as @mantine/form. See how
-`validateWithJoi` and `ValidatedMethod` are used in:
-
-* `imports/Books/Book.form.jsx`; and,
-* `imports/Books/Book.api.js`
-
-Feel free to use the convenience methods `publishWithPolling`, `routesFrom`, `useMeteorSubscription`,
-and `ValidatedMethod` in your own Meteor apps.
 
 ## Author
 
