@@ -1,0 +1,21 @@
+{
+  "short_name": "booklist",
+  "name": "Meteor Booklist",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/stack-of-books.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/stack-of-books.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#FFFFFF",
+  "scope": "/",
+  "theme_color": "#FFFFFF"
+}
