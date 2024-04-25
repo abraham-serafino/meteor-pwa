@@ -1,5 +1,5 @@
 import { Meteor } from "meteor/meteor"
-import { useTracker } from "meteor/react-meteor-data/suspense"
+import { useTracker } from "meteor/react-meteor-data"
 import { useMemo } from "react"
 
 const useMeteorSubscription = ({
@@ -17,9 +17,9 @@ const useMeteorSubscription = ({
     }
   })
 
-  const data = useTracker(async () => {
+  const data = useTracker(() => {
     if (Meteor.isClient) {
-      const data = await Collection.find(query).fetchAsync()
+      const data = Collection.find(query).fetch()
 
       if (findOne) {
         return data[0]

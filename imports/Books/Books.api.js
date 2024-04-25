@@ -15,7 +15,7 @@ const Books = new Mongo.Collection(BOOKS.FIND_ALL)
 if (Meteor.isServer) {
   Meteor.startup(async () => {
     // Create some sample data when the server starts.
-    const result = Books.find({}).fetchAsync()
+    const result = await Books.find({}).fetchAsync()
 
     if (!result?.length) {
       await Books.insertAsync({
@@ -54,7 +54,7 @@ const BooksApi = {
   createBook: ValidatedMethod(
     BOOKS.CREATE,
     async ({ author, title }) => {
-      return Books.upsertAsync({ author, title })
+      return Books.upsertAsync({ author, title }, { author, title })
     },
     createBookSchema
   ),
@@ -62,7 +62,7 @@ const BooksApi = {
   deleteBook: ValidatedMethod(
     BOOKS.DELETE,
     async (book) => {
-      return Books.removeAsync(book)
+      return await Books.removeAsync(book)
     },
     createBookSchema
   ),
