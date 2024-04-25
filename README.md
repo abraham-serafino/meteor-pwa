@@ -30,6 +30,11 @@ on desktops or  mobile devices. Take a look at the following files and folders f
 * `imports/client.js`
 * `.meteor/packages` (notice the addition of the force-ssl Meteor package)
 
+It also uses the new isomorphic, async Mongo methods (fetchAsync, insertAsync, removeAsync, etc.), in preparation
+for the upcoming Meteor 3.0 release.
+
+* `imports/books/Books.api.js`
+
 
 ## Author
 
